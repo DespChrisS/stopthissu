@@ -5,7 +5,8 @@ from dotenv import load_dotenv
 load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
 
-TARGET_USER_ID = 947843978861105182, 667668027109670932
+# Add as many target user IDs as you want
+TARGET_USER_IDS = [667668027109670932, 947843978861105182]
 YOUR_USER_ID = 1230904729731727460
 
 intents = discord.Intents.default()
@@ -25,7 +26,7 @@ async def on_message(message):
     if message.author.bot or message.guild is None:
         return
 
-    if message.author.id == TARGET_USER_ID:
+    if message.author.id in TARGET_USER_IDS:
         try:
             user = await client.fetch_user(YOUR_USER_ID)
 

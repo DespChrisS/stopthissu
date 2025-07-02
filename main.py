@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
 
-TARGET_USER_ID = 947843978861105182
+TARGET_USER_ID = 947843978861105182, 667668027109670932
 YOUR_USER_ID = 1230904729731727460
 
 intents = discord.Intents.default()
